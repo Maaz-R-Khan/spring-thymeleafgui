@@ -15,6 +15,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String productlist(Model model) {
+        //add productList from ProductListBean and populate it within products.
         model.addAttribute("products", productListBean.getProductList());
         return "productlist";
     }

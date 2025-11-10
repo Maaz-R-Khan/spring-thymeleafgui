@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
+//Service registers the class an Object(bean in spring terms)
 @Service
 public class ProductListBean {
 
