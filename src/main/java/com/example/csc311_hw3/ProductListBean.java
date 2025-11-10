@@ -1,4 +1,5 @@
 package com.example.csc311_hw3;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -52,4 +53,16 @@ public class ProductListBean {
     }
 
 
-}
+
+    public Product findProductById(String id) {
+        for (Product product : productList) {
+            if (product.getId().equals(id)) {
+                return product;
+            }
+        }
+        return null;
+    }
+
+
+    }
+

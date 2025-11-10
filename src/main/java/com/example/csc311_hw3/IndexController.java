@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexController {
@@ -21,7 +22,8 @@ public class IndexController {
     }
 
     @GetMapping("/product")
-    public String product(Model model) {
+    public String product(@RequestParam("id") String id, Model model) {
+        model.addAttribute("product", productListBean.findProductById(id));
         return "product";
     }
 
