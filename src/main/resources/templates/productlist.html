@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+</head>
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+<body>
+    <h1>Product List</h1>
+<table>
+    <tr th:each="product : ${products}">
+        <a> <th th:text="${product.id}">Id</th> </a>
+        <th th:text="${product.name}">Name</th>
+        <th th:text="${product.price}">Price</th>
+        <th th:text="${product.stockStatus}">Stock Status</th>
+        <th th:text="${product.rating}">Rating</th>
+        <th th:text="${product.description}">Description</th>
+        <th th:text="${product.customerReview}">Customer Review</th>
+
+    </tr>
+</table>
+
+
+
+</body>
+</html>
